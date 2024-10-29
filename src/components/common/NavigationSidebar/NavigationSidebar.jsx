@@ -57,11 +57,7 @@ function NavigationSidebar() {
         ))}
       </div>
 
-      <div
-        className=" flex flex-col gap-y-4   items-center 
-      pb-3 mt-auto
-      "
-      >
+      <div className="flex flex-col gap-y-4 items-center pb-3 mt-auto">
         <Link href="/profile">
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png " />
