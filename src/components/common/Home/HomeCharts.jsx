@@ -20,6 +20,7 @@ import { PieChart, Pie, Cell, Tooltip } from "recharts";
 
 import { BorrowersChart } from "./BorrowersChart";
 import Map from "./Map";
+import FunnelChart from "./FunnelChart";
 // Sample data
 const initialData = [
   { name: "QLD", value: 18.6, color: "#4285F4", date: "2023-01-15" },
@@ -62,7 +63,7 @@ function HomeCharts() {
           <BorrowersChart />
         </Card>
         <Card className="col-span-2">
-          <BorrowersChart />
+          <FunnelChart />
         </Card>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
