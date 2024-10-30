@@ -59,8 +59,8 @@ export default function FunnelChart() {
   };
 
   return (
-    <Card className="w-full h-[400px]">
-      <CardHeader className="flex flex-col md:flex-row md:items-center justify-between space-y-2 md:space-y-0 pb-4">
+    <Card className="w-full !h-[400px]">
+      <CardHeader className="flex flex-col md:flex-row md:items-center justify-between space-y-2 md:space-y-0 pb-2">
         <CardTitle className="text-lg md:text-xl font-bold">Details</CardTitle>
         <div className="flex space-x-2">
           {filterType === "value" && (
@@ -94,7 +94,7 @@ export default function FunnelChart() {
           </Select>
         </div>
       </CardHeader>
-      <div className="flex justify-between mx-10 text-sm font-bold mt-4">
+      <div className="flex justify-between mx-10 text-sm font-bold mt-2">
         <div className="space-y-1 text-center">
           <h3 className="text-2xl">27.8K</h3>
           <p className="text-muted-foreground">Opened Request</p>
@@ -109,20 +109,16 @@ export default function FunnelChart() {
         </div>
       </div>
       <CardContent>
-        <ChartContainer className="!h-[240px] !w-full" config={chartConfig}>
-          <AreaChart
-            className="!h-[300px]"
-            data={data}
-            margin={{ left: 12, right: 12 }}
-          >
-            <CartesianGrid className="!h-[300px]" vertical={false} />
-            {/* <XAxis
+        <ChartContainer className="!h-[250px] w-full" config={chartConfig}>
+          <AreaChart data={data} margin={{ left: 12, right: 12 }}>
+            <CartesianGrid vertical={false} />
+            <XAxis
               dataKey="month"
               tickLine={false}
               axisLine={false}
               tickMargin={8}
               tickFormatter={(value) => value.slice(0, 3)}
-            /> */}
+            />
             <ChartTooltip
               cursor={false}
               content={<ChartTooltipContent indicator="dot" />}
